@@ -28,9 +28,14 @@
 
 ---
 
-遇到的坑：在 macOS 已安装XCode的情况下，调试出现错误提示：
-`lldb: unrecognized option '--interpreter=mi'`
+遇到的坑：在 macOS 已安装XCode的情况下，调试出现错误提示：`lldb: unrecognized option '--interpreter=mi'`
 
 经测试为新版本的 lldb 中已经将 `--interpreter` 选项移除，另设了 `lldb-mi` 命令，位于 `/Applications/XCode.app/Contents/Developer/usr/bin/lldb-mi`，由于不在 `$PATH` 中无法找到。
 
-解决办法为将这个目录添加到 `$PATH`，在 `~/.bash_profile` 中添加：`export PATH="/Applications/XCode.app/Contents/Developer/usr/bin:$PATH"` 即可。
+解决办法为将这个目录添加到 `$PATH`，在 `~/.bash_profile` 中添加：
+
+```bash
+export PATH="/Applications/XCode.app/Contents/Developer/usr/bin:$PATH"
+```
+
+即可。
