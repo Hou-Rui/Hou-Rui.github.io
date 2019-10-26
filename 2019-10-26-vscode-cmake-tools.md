@@ -1,7 +1,4 @@
----
-layout: post
-title:  "在 Visual Studio Code 中使用 CMake 的实践"
----
+# 在 Visual Studio Code 中使用 CMake 的实践
 
 现在 vscode 的 C/C++ 插件已经十分完善，提供了良好的 IntelliSense 和调试，可以用于写一些小型项目了。但是，vscode 毕竟不是 IDE，默认并不提供任何自动化的项目构建。对于单个程序，可以使用 Code Runner 插件来直接编译；对于非常小的项目，可以考虑直接手写 Makefile；但对于稍微复杂的项目，自己编写 Makefile 是一件费心费力的工作，而且 Makefile 对新手并不友好。此时，CMake 是一个十分不错的选择：CMake 跨平台，配置简单，自动化程度高。因此，我尝试在 vscode 中使用 CMake 解决项目构建问题。
 
