@@ -4,22 +4,32 @@
 
 ## 基础工具
 
-```
+```bash
 sudo apt install curl wget git cmake
 sudo apt install python3 ipython3 python3-venv python3-pip
 sudo apt install openjdk-14-jdk maven gradle
 ```
 
+## Dock
+```bash
+sudo apt install plank
+```
+
+## 全局菜单
+```bash
+sudo apt install xfce4-appmenu-plugin
+```
+
 ## 剪贴板管理器
 clipman可用于XFCE Panel中。
-```
+```bash
 sudo apt install xfce4-clipman-plugin
 ```
 
 ## 中文输入法
 
 用的是Fcitx+RIME。
-```
+```bash
 sudo apt install fcitx
 sudo apt install fcitx-rime
 ```
@@ -43,6 +53,25 @@ XUbuntu自带xRDP用于远程桌面管理，Gigolo用于SSH管理，但使用体
 ```bash
 sudo apt remove xrdp gigolo --autoremove
 sudo add-apt-repository ppa:remmina-ppa-team/remmina-next
-sudo apt-get update
+sudo apt update
 sudo apt install remmina
+```
+
+## Flatpak
+用来安装一些在Ubuntu Repo和Snap Store里都没有的包。对全局菜单和Fcitx输入法支持不佳。
+```
+flatpak install flathub org.gtk.Gtk3theme.Arc-Dark
+flatpak install --user https://flathub.org/beta-repo/appstream/org.gimp.GIMP.flatpakref
+flatpak install flathub us.zoom.Zoom
+```
+
+## tmux
+配置终端分屏。创建`~/.tmux.conf`，写入：
+```tmux
+set -g mouse on
+setw -q -g utf8 on
+set -g default-terminal "screen-256color"
+set -g set-titles on
+setw -g automatic-rename on
+set -g renumber-windows on
 ```
