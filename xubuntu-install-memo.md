@@ -50,6 +50,8 @@ Linux版的QQ本身恐怕只是敷衍之作，版本奇旧，在任何现代系�
 
 ```
 wget https://deepin-wine.i-m.dev/setup.sh -O /tmp/deepin-setup.sh
+chmod +x /tmp/deepin-setup.sh
+/tmp/deepin-setup.sh
 sudo apt install com.qq.im.deepin:i386 com.qq.weixin.deepin:i386
 ```
 
