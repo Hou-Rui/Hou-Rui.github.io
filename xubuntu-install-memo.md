@@ -35,6 +35,13 @@ sudo apt install fcitx-rime
 ```
 RIME的配置目录在`~/.config/fcitx/rime`。
 
+## 终端
+
+XFCE自带的终端`xfce4-terminal`就足够好用，但是使用GTK3的新版本改快捷键十分麻烦。快捷键是在一个Scheme配置文件中设定的：
+```bash
+vim ~/.config/xfce4/terminal/accels.scm
+```
+
 ## Visual Studio Code
 
 Snap的版本似乎不支持Fcitx输入，因此用deb来安装。
