@@ -26,6 +26,13 @@ clipman可用于XFCE Panel中。
 sudo apt install xfce4-clipman-plugin
 ```
 
+## 终端
+
+XFCE自带的终端`xfce4-terminal`就足够好用，但是使用GTK3的新版本改快捷键十分麻烦。快捷键是在一个Scheme配置文件中设定的：
+```bash
+vim ~/.config/xfce4/terminal/accels.scm
+```
+
 ## 中文输入法
 
 用的是Fcitx+RIME。
@@ -35,11 +42,15 @@ sudo apt install fcitx-rime
 ```
 RIME的配置目录在`~/.config/fcitx/rime`。
 
-## 终端
+## QQ和微信
 
-XFCE自带的终端`xfce4-terminal`就足够好用，但是使用GTK3的新版本改快捷键十分麻烦。快捷键是在一个Scheme配置文件中设定的：
-```bash
-vim ~/.config/xfce4/terminal/accels.scm
+Linux版的QQ本身恐怕只是敷衍之作，版本奇旧，在任何现代系统上都完全不能用。网页版微信已经停止支持。因此只能用wine来运行Windows版QQ和微信。
+
+然而Windows版QQ和微信的标准程度也非常差（QQ尤甚）。自己用最新版本配置wine会遇到无穷的困难。用事先配置好的deepin-wine安装能给自己省去不少麻烦。
+
+```
+wget https://deepin-wine.i-m.dev/setup.sh -O /tmp/deepin-setup.sh
+sudo apt install com.qq.im.deepin:i386 com.qq.weixin.deepin:i386
 ```
 
 ## Visual Studio Code
